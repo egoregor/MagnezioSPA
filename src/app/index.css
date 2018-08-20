@@ -1,0 +1,44 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+}
+
+.thumbnail img.pull-right {
+  width: 50px;
+}
+
+
+.main-container {
+	margin-top: 15px;
+}
+
+.coin-info {
+	margin-top: 15px;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+.scrollable-menu li {
+	cursor: pointer;
+}
+
+.coin-dropdown {
+  min-width: 100px;
+  padding-right: 30px;
+  text-align: left;
+  position: relative;
+}
+.coin-dropdown .caret {
+  position: absolute;
+  top: 13px;
+  right: 5px;
+}

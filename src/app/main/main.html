@@ -1,0 +1,28 @@
+<div class="container main-container">
+
+  <div class="row">     
+    <div class="col-md-6">
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle coin-dropdown" data-toggle="dropdown">
+          <span class="coin-name" ng-bind="main.coinName != '' ? main.coinName : 'Scrollable Menu'"></span>
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu scrollable-menu" role="menu">
+          <li ng-repeat="coin in main.coinsList | orderBy:coin"><a ng-bind="::coin" ng-click="main.getCoinInfo(coin)"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-12 coin-info">
+      <table class="table table-striped">
+        <tbody>
+          <tr ng-repeat="(name, value) in main.coinInfo">
+            <th scope="row" ng-bind="name"></th>
+            <td ng-bind="value | onlyNumberDevide:3"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  
+</div>
