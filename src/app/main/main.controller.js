@@ -11,6 +11,7 @@
 
     var apiHost = 'http://coincap.io';
 
+    vm.coinIsLoading = false;
     vm.awesomeThings = [];
     vm.coinName = "";
     vm.coinInfo = {};
@@ -35,12 +36,14 @@
     });    
 
     function getCoinInfo(coinName) {
+      vm.coinIsLoading = true;
       var name = null;
       var deferred = $q.defer();
       if (name !== null) deferred.resolve(name);
 
       $http.get(apiHost + '/page/' + coinName)
       .success(function(data) {
+        vm.coinIsLoading = false;
         deferred.resolve(data);
       })
       .error(deferred.reject);
